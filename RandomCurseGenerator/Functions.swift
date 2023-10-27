@@ -42,7 +42,7 @@ class SwearManager {
         var secondWord : String = ""
         
         func getAdjective() {
-            var doesAdjectiveExist = Bool.random()
+            let doesAdjectiveExist = Bool.random()
             
             if doesAdjectiveExist {
                 adjective = adjectives

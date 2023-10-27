@@ -7,13 +7,22 @@
 
 import SwiftUI
 
+
+
 struct ContentView: View {
+    
+let swearManager = SwearManager()
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Button(action: swearManager.curseOutLoud , label: {
+                Circle()
+                    .foregroundStyle(.red)
+                    .overlay(Text("PUSH\nTO\nSWEAR"))
+                    .font(.largeTitle)
+                    .foregroundStyle(.white)
+                    .multilineTextAlignment(.center)
+            })
         }
         .padding()
     }

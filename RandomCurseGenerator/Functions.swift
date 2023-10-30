@@ -12,15 +12,15 @@ import AVFoundation
 class SwearManager {
     let synthesizer = AVSpeechSynthesizer()
     
-    let allSwears = ["shitt", "fuck", "damn", "piss", "bitch", "cock", "cunt"]
+    let allSwears = ["shitt", "fuck", "damn", "piss", "bitch", "cock", "cunt", "bugger", "crap", "frig", "prick", "twat"]
     
-    let allNouns = ["cuzin", "mother", "father", "sister", "brother", "grandma", "grandpa", "cock", "dick", "tit", "ass", "butthole", "asshole", "clit", "chair", "table", "sofa", "banana", "donkey"]
+    let allNouns = ["cuzin", "mother", "father", "sister", "brother", "grandma", "grandpa", "cock", "dick", "tit", "ass", "butthole", "asshole", "clit", "chair", "table", "sofa", "banana", "donkey", "chicken", "dillhole", "wobble", "pillbox", "giraffe", "lollipop", "twit"]
     
-    let allVerbs = ["suck", "fuck", "eat", "lick", "tast"]
+    let allVerbs = ["suck", "fuck", "eat", "lick", "taste", "hump", "joke", "choke"]
     
-    let allParts = ["cock", "dick", "tit", "ass", "butthole", "asshole", "clit"]
+    let allParts = ["cock", "dick", "tit", "ass", "butthole", "asshole", "clit", "pussy"]
     
-    let allAdjectives = ["superflewus", "fantastic", "super speshal", "tre men dus", "awesome", "gigantic", "intrinsic", "farsical", "selfish"]
+    let allAdjectives = ["superfloo us", "fantastic", "super speshal", "tremen duhs", "philandering", "gigantic", "intrinsic", "farsical", "selfish", "stupid", "tragic", "great", "big", "titanic", "metaphysical"]
     
     
     func insertRandomValue(list: [String]) -> String {

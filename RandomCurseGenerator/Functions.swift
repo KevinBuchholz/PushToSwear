@@ -12,15 +12,15 @@ import AVFoundation
 class SwearManager {
     let synthesizer = AVSpeechSynthesizer()
     
-    let allSwears = ["shitt", "fuck", "damn", "piss", "bitch", "cock", "cunt", "bugger", "crap", "frig", "prick", "twat"]
+    let allSwears = ["shitt", "fuck", "damn", "piss", "bitch", "cock", "cunt", "bugger", "crap", "frig", "prick", "twat", "slag"]
     
-    let allNouns = ["cuzin", "mother", "father", "sister", "brother", "grandma", "grandpa", "cock", "dick", "tit", "ass", "butthole", "asshole", "clit", "chair", "table", "sofa", "banana", "donkey", "chicken", "dillhole", "wobble", "pillbox", "giraffe", "lollipop", "twit"]
+    let allNouns = ["cuzin", "mother", "father", "sister", "brother", "grandma", "grandpa", "cock", "dick", "tit", "ass", "butthole", "asshole", "clit", "chair", "table", "sofa", "banana", "donkey", "chicken", "dillhole", "wobble", "pillbox", "giraffe", "lollipop", "twit", "shrimp", "jizz", "granny", "bastard", "slag", "sandwich"]
     
-    let allVerbs = ["suck", "fuck", "eat", "lick", "taste", "hump", "joke", "choke"]
+    let allVerbs = ["suck", "fuck", "eat", "lick", "taste", "hump", "joke", "choke", "gobble", "guzzle"]
     
-    let allParts = ["cock", "dick", "tit", "ass", "butthole", "asshole", "clit", "pussy"]
+    let allParts = ["cock", "dick", "tit", "ass", "butthole", "asshole", "clit", "pussy", "titty", "taint", "snatch", "scrotum", "leg", "arm", "hand", "mouth", "foot", "butt", "kneecap", "elbow", "toe", "finger"]
     
-    let allAdjectives = ["superfloo us", "fantastic", "super speshal", "tremen duhs", "philandering", "gigantic", "intrinsic", "farsical", "selfish", "stupid", "tragic", "great", "big", "titanic", "metaphysical"]
+    let allAdjectives = ["superflewus", "fantastic", "super speshal", "tremen duhs", "philandering", "gigantic", "intrinsic", "farsical", "selfish", "stupid", "tragic", "great", "big", "titanic", "metaphysical", "sawed off", "relentless", "desperate", "greedy", "incestuous", "stinking", "rotten", "filthy", "low down"]
     
     
     func insertRandomValue(list: [String]) -> String {

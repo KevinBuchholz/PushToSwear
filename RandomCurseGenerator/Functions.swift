@@ -13,13 +13,13 @@ class SwearManager {
     let synthesizer = AVSpeechSynthesizer()
     
 
-    let allSwears = ["shitt", "fuck", "damn", "piss", "bitch", "cock", "cunt", "bugger", "crap", "frig", "prick", "twat", "slag"]
+    let allSwears = ["shitt", "fuck", "damn", "piss", "bitch", "cock", "cunt", "buggerr", "crapp", "frigg", "prick", "twatt", "slagg"]
 
     
     let allNouns = ["cuzin", "mother", "father", "sister", "brother", "grandma", "grandpa", "cock", "dick", "tit", "ass", "butthole", "asshole", "clit", "chair", "table", "sofa", "banana", "donkey", "chicken", "dillhole", "wobble", "pillbox", "giraffe", "lollipop", "twit", "shrimp", "jizz", "granny", "bastard", "slag", "sandwich"]
     
 
-    let allVerbs = ["suck", "fuck", "eat", "lick", "taste", "hump", "joke", "choke", "gobble", "guzzle"]
+    let allVerbs = ["suck", "fuck", "eat", "lick", "tast", "hump", "joke", "chok", "gobbl", "guzzl"]
 
     
     let allParts = ["cock", "dick", "tit", "ass", "butthole", "asshole", "clit", "pussy", "titty", "taint", "snatch", "scrotum", "leg", "arm", "hand", "mouth", "foot", "butt", "kneecap", "elbow", "toe", "finger"]

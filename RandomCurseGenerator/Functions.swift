@@ -12,15 +12,15 @@ import AVFoundation
 class SwearManager {
     let synthesizer = AVSpeechSynthesizer()
     
-    let allSwears = ["shitt", "fuck", "damn", "piss", "bitch", "cock", "cunt", "bugger", "crap", "frig", "prick", "twat"]
+    let allSwears = ["shitt", "fuck", "damn", "piss", "bitch", "cock", "cunt", "bugger", "crapp", "frigg", "prick", "twat"]
     
     let allNouns = ["cuzin", "mother", "father", "sister", "brother", "grandma", "grandpa", "cock", "dick", "tit", "ass", "butthole", "asshole", "clit", "chair", "table", "sofa", "banana", "donkey", "chicken", "dillhole", "wobble", "pillbox", "giraffe", "lollipop", "twit"]
     
-    let allVerbs = ["suck", "fuck", "eat", "lick", "taste", "hump", "joke", "choke"]
+    let allVerbs = ["suck", "fuck", "eat", "lick", "tast", "hump", "jok", "chok"]
     
     let allParts = ["cock", "dick", "tit", "ass", "butthole", "asshole", "clit", "pussy"]
     
-    let allAdjectives = ["superfloo us", "fantastic", "super speshal", "tremen duhs", "philandering", "gigantic", "intrinsic", "farsical", "selfish", "stupid", "tragic", "great", "big", "titanic", "metaphysical"]
+    let allAdjectives = ["superflewus", "fantastic", "super speshal", "tremenduhs", "philandering", "gigantic", "intrinsic", "farsical", "selfish", "stupid", "tragic", "great", "big", "titanic", "metaphysical"]
     
     
     func insertRandomValue(list: [String]) -> String {
@@ -28,6 +28,10 @@ class SwearManager {
         
         return String(list[randomIndex])
     }
+    
+    var adjective : String = ""
+    var firstWord : String = ""
+    var secondWord : String = ""
         
     func curseOutLoud() {
         
@@ -37,9 +41,7 @@ class SwearManager {
         let bodyPartChoice = "\(insertRandomValue(list: allParts))"
         let verber = "\(insertRandomValue(list: allVerbs))er"
         let adjectives = "\(insertRandomValue(list: allAdjectives))"
-        var adjective : String = ""
-        var firstWord : String = ""
-        var secondWord : String = ""
+       
         
         func getAdjective() {
             let doesAdjectiveExist = Bool.random()
@@ -77,14 +79,27 @@ class SwearManager {
                 secondWord = nounChoice
             }
         }
+        
         getAdjective()
         getFirstWord()
         getSecondWord()
-        let utterance = AVSpeechUtterance(string: "\(adjective) \(firstWord)  \(secondWord)")
-        utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
-        utterance.rate = 0.45
         
-        synthesizer.speak(utterance)
-        
+        if firstWord != secondWord {
+            let utterance = AVSpeechUtterance(string: "\(adjective) \(firstWord)  \(secondWord)")
+            utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+            utterance.rate = 0.45
+            
+            synthesizer.speak(utterance)
+        } else {
+            getAdjective()
+            getFirstWord()
+            getSecondWord()
+            
+            let utterance = AVSpeechUtterance(string: "\(adjective) \(firstWord)  \(secondWord)")
+            utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+            utterance.rate = 0.45
+            
+            synthesizer.speak(utterance)
+        }
     }
 }

@@ -12,9 +12,15 @@ import SwiftUI
 struct ContentView: View {
     
 let swearManager = SwearManager()
+var hasButtonBeenPushed = false
     
     var body: some View {
         VStack {
+            if !hasButtonBeenPushed {
+                
+            } else {
+                Text(swearManager.firstWord)
+            }
             Button(action: swearManager.curseOutLoud , label: {
                 Circle()
                     .foregroundStyle(.red)
@@ -25,8 +31,9 @@ let swearManager = SwearManager()
             })
         }
         .padding()
+        }
     }
-}
+
 
 #Preview {
     ContentView()

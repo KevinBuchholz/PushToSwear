@@ -25,7 +25,7 @@ class SwearManager {
     let allParts = ["cock", "dick", "tit", "ass", "butthole", "asshole", "clit", "pussy", "titty", "taint", "snatch", "scrotum", "leg", "arm", "hand", "mouth", "foot", "butt", "kneecap", "elbow", "toe", "finger"]
     
 
-    let allAdjectives = ["superflewus", "fantastic", "super speshal", "tremen duhs", "philandering", "gigantic", "intrinsic", "farsical", "selfish", "stupid", "tragic", "great", "big", "titanic", "metaphysical", "sawed off", "relentless", "desperate", "greedy", "incestuous", "stinking", "rotten", "filthy", "low down", "tiny", "sanctimonious", "orange"]
+    let allAdjectives = ["superflewus", "fantastic", "super speshal", "tremen duhs", "philandering", "gigantic", "intrinsic", "farsical", "selfish", "stupid", "tragic", "great", "big", "titanic", "metaphysical", "sawed off", "relentless", "desperate", "greedy", "incestuous", "stinking", "rotten", "filthy", "low down", "tiny", "sanctimonious", "orange", "bulbous", "thrombose"]
 
     
     

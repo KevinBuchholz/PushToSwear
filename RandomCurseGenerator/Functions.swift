@@ -43,6 +43,8 @@ import AVFoundation
         
         let allAdjectivesClean = ["wonderful", "happy", "terrific"]
         
+        let shakespeare = ["Thou damned and luxurious mountain goat", "Scurvy politician", "Thou damned doorkeeper to every custrel that comes inquiring for his Tib!", "Where got’st thou that goose look?", "Base dunghill villain and mechanical", "Finch-egg!", "You Banbury cheese!", "You bull’s pizzle", "You scullion, you rampallion, you fustilarian!", "You whoreson cullionly barber-monger!", "A most notable coward, an infinite and endless liar, an hourly promise breaker, the owner of no one good quality.", "Away, you starvelling, you elf-skin, you dried neat’s-tongue, bull’s-pizzle, you stock-fish!", "Away, you three-inch fool!", "Come, come, you froward and unable worms!", "Go, prick thy face, and over-red thy fear, Thou lily-liver’d boy.", "I am sick when I do look on thee", "I must tell you friendly in your ear, sell when you can, you are not for all markets.", "I’ll beat thee, but I would infect my hands.", "I scorn you, scurvy companion.", "Methink’st thou art a general offence and every man should beat thee.", "More of your conversation would infect my brain."]
+        
         
         
         func insertRandomValue(list: [String]) -> String {
@@ -54,7 +56,7 @@ import AVFoundation
         var adjective : String = ""
         var firstWord : String = ""
         var secondWord : String = ""
-        
+        var bard : String = ""
         
         
         func curseOutLoud() {
@@ -135,7 +137,23 @@ import AVFoundation
             let bodyPartChoiceClean = "\(insertRandomValue(list: allPartsClean))"
             let verberClean = "\(insertRandomValue(list: allVerbsClean))er"
             let adjectivesClean = "\(insertRandomValue(list: allAdjectivesClean))"
+            let shakespeare = "\(insertRandomValue(list: shakespeare))"
             
+            func getShakespeare() {
+                let doesShakespeareExist = Bool.random()
+                
+                if doesShakespeareExist {
+                    bard = shakespeare
+                    return
+                }
+                else {
+                    bard = ""
+                }
+            }
+            
+            func shakespeareOnly() {
+                bard = shakespeare
+            }
             
             func getAdjectiveClean() {
                 let doesAdjectiveExist = Bool.random()
@@ -174,22 +192,25 @@ import AVFoundation
                 }
             }
             
-            getAdjectiveClean()
-            getFirstWordClean()
-            getSecondWordClean()
+              shakespeareOnly()
+//            getShakespeare()
+//            getAdjectiveClean()
+//            getFirstWordClean()
+//            getSecondWordClean()
             
             if firstWord != secondWord {
-                let utterance = AVSpeechUtterance(string: "\(adjective) \(firstWord)  \(secondWord)")
+                let utterance = AVSpeechUtterance(string: "\(bard)")
                 utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
                 utterance.rate = 0.45
                 
                 synthesizer.speak(utterance)
             } else {
+                shakespeareOnly()
                 getAdjectiveClean()
                 getFirstWordClean()
                 getSecondWordClean()
                 
-                let utterance = AVSpeechUtterance(string: "\(adjective) \(firstWord)  \(secondWord)")
+                let utterance = AVSpeechUtterance(string: "\(bard)")
                 utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
                 utterance.rate = 0.45
                 
